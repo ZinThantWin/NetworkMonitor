@@ -2,7 +2,7 @@ import SwiftUI
 import Network
 
 public class NetworkMonitor : ObservableObject {
-    public var isConnected = false
+    @Published public var isConnected = false
     private let workerQueue = DispatchQueue(label: "Monitor")
     private let networkMonitor = NWPathMonitor()
     
